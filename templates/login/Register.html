@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--boxicons.com-->
+<html>
+    <head>
+        <title> Sign Up User Name </title>
+        <meta charset="UTF-8">
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+            font-family:"poppins",sans-serif;
+          }
+          section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background: url("https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-repeat: no-repeat;
+            background-size: 1492px 780px;
+          }
+          .form {
+            display: flex;
+          }
+          .form-sign-up {
+            position: relative;
+            width: 60%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+          }
+          h2 {
+            font-size: 2em;
+            color: #ffffff;
+            text-align: center;
+          }
+          .input {
+            position: relative;
+            margin: 30px;
+            width: 410px;
+            border-bottom: 1px solid #ffffff;
+          }
+          .input label {
+            position: absolute;
+            top:50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 1em;
+            pointer-events: none;
+            transition: .5s;
+          }
+          input:focus + label,
+          input:valid + label{
+            top: -10px;
+          }
+          .input input {
+            width: 100%;
+            height: 40px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            padding: 0 35px 0 5px;
+            color: white;
+          }
+          button {
+            height: 40px;
+            width: 50%;
+            font-size: 1em;
+            font-weight: 600;
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+          }
+          #submit {
+            border-bottom: none;
+          }
+          #submit button {
+            width: 100%;
+          }
+          .inputfile {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+          }
+          .inputfile + label {
+              font-size: 1.25em;
+              font-weight: 700;
+              color: white;
+              background-color: black;
+              display: inline-block;
+              cursor: pointer;
+            }
+
+            .inputfile:focus + label,
+            .inputfile + label:hover {
+                background-color: red;
+            }
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 30vh;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #fcfcfc;
+  margin-top: 60px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: 260px;
+  background-color: #ffffff;
+  padding: 10px 30px 40px;
+}
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  
+}
+
+.drop_box {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_box h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.drop_box p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #005af0;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #005af0;
+  padding: 10px 20px;
+  border: none;
+  outline: 1px solid #010101;
+}
+        </style>
+    </head>
+    <body>
+      <section>
+        <div class="form-sign-up">
+            <form method="POST" action="{{url_for('Register')}}">
+                <h2> Sign Up </h2>
+                <div class="form">
+                    <div class="form-input">
+                      <div class="input">
+                          <input typr="text" name="Account" id="Account" required>
+                          <label for="Account"> Account </label>
+                      </div>
+                      <div class="input">
+                          <input type="text" name="UserName" id="UserName" required>
+                          <label for="UserName"> Full name </label>
+                      </div>
+                      <div class="input">
+                          <input type="password" name="Password" id="password" required>
+                          <label for="password"> Password </label>
+                      </div>
+                      <div class="input">
+                          <input type="password" name="confirmPassword" id="confirmPassword" required>
+                          <label for="confirmPassword"> Confirm Password </label>
+                      </div>
+                      <div class="input" id="submit">
+                        <button type="submit">Register</button>
+                      </div>
+                    </div>
+                    <div class="form-input">
+                      <div class="input">
+                          <input type="gmail" name="Gmail" id="gmail" required>
+                          <label for="gmail"> Gmail </label>
+                      </div>
+                      <div class="input">
+                          <input type="text" name="PhoneNumber" id="phone_number" required>
+                          <label for="phone_number"> Phone number </label>
+                      </div>
+                      <div class="input">
+                        <div class="container">
+                          <div class="card">
+                            <h3>choose Avatar</h3>
+                            <div class="drop_box">
+                              <header>
+                                <img src="" id="avatar">
+                              </header>
+                              <p>Files Supported: {% for file in fileAccept %}{{ file }},{% endfor %}</p>
+                              <input type="file" hidden accept="{% for file in fileAccept %}.{{file}},{% endfor %}"id="fileID" style="display:none;" name="Avatar">
+                              <button class="btn">Choose File</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </form>
+        </div>
+      </section>
+      <script>
+          const dropArea = document.querySelector(".drop_box"),
+    button = dropArea.querySelector("button"),
+    dragText = dropArea.querySelector("header"),
+    input = dropArea.querySelector("input"),
+    avatar = document.querySelector("#avatar");
+
+  button.onclick = () => {
+    input.click();
+  }
+  const reader = new FileReader()
+
+        input.addEventListener("change", (event) => {
+          const files = event.target.files;
+          
+          reader.readAsDataURL(files[0])
+          
+          reader.addEventListener("load", (event) => {
+            const url = event.target.results
+            avatar.src = URL.createObjectURL(url);
+          })
+        })
+      </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> login</title>
+        <meta charset="utf-8" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: "poppins",sans-serif;
+            }
+            section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                width: 100%;
+                background:  url("https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+                background-size: 1492px 780px;
+                background-repeat: no-repeat;
+            }
+            .form-box {
+                position: relative;
+                width: 400px;
+                height: 450px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                border: 2px solid #fff;
+                
+            }
+            h2 {
+                font-size: 2em;
+                color: white;
+                text-align: center;
+            }
+            .inputbox {
+                position: relative;
+                margin: 30px;
+                width: 310px;
+                border-bottom: 2px solid #fff;
+
+            }
+            .inputbox label {
+                position: absolute;
+                top:50%;
+                left: 5px;
+                transform:  translateY(-10%, -50%);
+                color: white;
+                font-size: 1em;
+                pointer-events: none;
+                transition: .5s;
+            }
+            input:focus + label,
+            input:valid + label{
+                top: -5px;
+            }
+            .inputbox input {
+                width: 100%;
+                height: 50px;
+                background: transparent;
+                border: none;
+                outline: none;
+                font-size: 1em;
+                padding: 0 35px 0 5px;
+                color: white;
+            }
+            .forgot_password {
+                margin-left: 97px;
+                color: white;
+                font-weight: bold;
+            }
+            #submit, #Register {
+                border-bottom: none;
+            }
+            #submit button {
+                width:100%;
+                cursor: pointer;
+                height: 40px;
+                border-radius:10px;
+                color: black;
+                background: #fff;
+                font-size: 1.2em;
+                border: none;
+                font-weight: 800;
+                background-color: #fff;
+                align-items: center;
+            } 
+            #submit button:hover {
+                color: rgb(62, 61, 61);
+                background: rgb(161, 150, 150);
+            }
+            #Register {
+                text-align: right;
+            }
+            #Register p , #Register a {
+                color: white;
+                font-weight: bold;
+            }
+            a:hover,  #Register a:hover{
+                color: rgb(177, 174, 174);
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="/Login" method="POST">
+                        <h2> login </h2>
+                        <div class="inputbox">
+                            <icon name="heart"><icon>
+                            <input type="text" id="Account" name="Account" required>
+                            <label for="Account"> User name </label>
+                        </div>
+                        <div class="inputbox">
+                            
+                            <input type="password" id="password" name="Password" required >
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="forgot_password">
+                            <a class="forgot_password" href="/forgot_password">Forgot password?</a>
+                        </div>
+                        <div class="inputbox" id="submit">
+                            <button type="submit"> Login </button>
+                        </div>
+                        <div class="inputbox" id="Register">
+                            <p>you need a Account <a href="/Register">register here!</a></p>
+                        </div>     
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>-

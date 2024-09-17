@@ -3,6 +3,7 @@ from module import *
 from sql import *
 from flask import  request,render_template,redirect, url_for, flash
 from flask_login import logout_user, login_required, current_user, login_user
+from sqlalchemy.exc import IntegrityError
 
 
 def main():
@@ -26,42 +27,87 @@ def Login():
         AccountUser = Users.query.filter_by(Account = Account).first()
         if AccountUser:
             check = check_password(AccountUser.Password, Password )
+            flash(f"kiểm tra mật khẩu: { check}", "error")
             if check:
                 login_user(AccountUser)
                 return redirect(url_for('Home'))
             else:
-                pass
+                print("kiểm tra mật khẩu", check)
     return render_template(f"{ TEMPLATE_LOGIN }login.html")
 
 @app.route("/Register", methods = ["GET", "POST"])
 def Register():
     if request.method == "POST":
-        UsersName = request.form["UserName"]
+        UserName = request.form["UserName"]
         Account = request.form["Account"]
         Password = request.form["Password"]
         confirmPassword = request.form["confirmPassword"]
         Gmail = request.form["Gmail"]
         PhoneNumber = request.form["PhoneNumber"]
         Avatar = request.files["Avatar"]
-        
+        duplicateError = "Duplicate entry"
+        duplicateAccount = f"{ duplicateError } '{ Account }' for key 'Account'"
+        duplicateGmail = f"{ duplicateError } '{ Gmail }' for key 'Gmail'"
+        duplicatePhoneNumber = f"{ duplicateError } '{ PhoneNumber }' for key 'PhoneNumber'"
+                
         if Password == confirmPassword:
-            Password = hash_password(Password)
-            fileName, Status = SaveFile(Avatar, PATH_IMG_AVATAR_USER)
-            if Status == True:
-                user = Users(
-                    UsersName = UsersName,
-                    Account = Account,
-                    Password = Password,
-                    Gmail = Gmail,
-                    PhoneNumber = PhoneNumber,
-                    Avatar = fileName
-                )
+            PasswordHash = hash_password(Password)
+            user = Users(
+                UserName = UserName,
+                Account = Account,
+                Password =  PasswordHash,
+                Gmail = Gmail,
+                PhoneNumber = PhoneNumber,
+            )
+            try:
                 db.session.add(user)
-                db.commit()
+                db.session.commit()
+
+                fileName = "defaulf.png"
+                if Avatar.filename != '':
+                    Name, Status = SaveFile(Avatar,f"{ STATIC }/{ PATH_IMG_AVATAR_USER }")
+                    if Status == True:
+                        fileName = Name  
+
+                Users.query.filter_by(Account = Account).update(dict(Avatar = fileName))
+                db.session.commit()
+                flash("register successfully", "success")
                 return redirect(url_for("Login"))
-        else:
-            pass
-    return render_template(f"{ TEMPLATE_LOGIN }register.html", fileAccept = ALLOWED_EXTENSIONS)
+            except IntegrityError as e:
+                db.session.rollback() # hoàn tác lại thay đổi nếu có lỗi
+                if duplicateAccount in str(e):
+                    flash("account already exists", "error")
+                    Account = ""
+                if duplicateGmail in str(e):
+                    flash("Gmail already exists", "error")
+                    Gmail = ""
+                if duplicatePhoneNumber in str(e):
+                    flash("Phone number already exists", "error")
+                    PhoneNumber = ""
+
+                return render_template(f"{ TEMPLATE_LOGIN }register.html",
+                                        fileAccept = ALLOWED_EXTENSIONS,
+                                        account = Account,
+                                        gmail = Gmail,
+                                        phoneNumber = PhoneNumber,
+                                        userName = UserName, 
+                                        password = Password,
+                                        confirmPassword = confirmPassword,
+                                        avatarDefault = PATH_IMG_AVATAR_USER_DEFAULT)    
+        else: 
+            flash("Confirmation password is incorrect", "error")
+            Password = ""
+            confirmPassword = ""
+            return render_template(f"{ TEMPLATE_LOGIN }register.html",
+                                        fileAccept = ALLOWED_EXTENSIONS,
+                                        account = Account,
+                                        gmail = Gmail,
+                                        phoneNumber = PhoneNumber,
+                                        userName = UserName,
+                                        password = Password,
+                                        confirmPassword = confirmPassword,
+                                        avatarDefault = PATH_IMG_AVATAR_USER_DEFAULT) 
+    return render_template(f"{ TEMPLATE_LOGIN }register.html", fileAccept = ALLOWED_EXTENSIONS, avatarDefault = PATH_IMG_AVATAR_USER_DEFAULT)
 
 @app.route("/ForgotPasword", methods = ["GET", "POST"])
 def take_back_password():

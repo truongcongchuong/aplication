@@ -1,0 +1,159 @@
+.mobal{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(60, 57, 57, 0.5);
+    display: none;
+}
+.content-mobal {
+    margin: auto;
+    width: 37%;
+    height: 90%;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+}
+.header_mini_page {
+    border-bottom: 1px solid rgb(205, 204, 204);
+    height: 9%;
+    width: 100%;
+}
+.header_mini_page p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-size: 1.3em;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+}
+.header_mini_page button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgb(211, 210, 210);
+    font-size: 1.3em;
+    color: rgb(126, 123, 123);
+    position: absolute;
+    right: 10px;
+}
+.header_mini_page button:hover {
+    background: rgb(224, 222, 222);
+    color: rgb(93, 91, 91);
+}
+.content_mini_page {
+    width: 90%;
+    margin: 10px auto;
+}
+.input-caption {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.select-wrapper {
+    position: relative;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.styled-select {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #5f5f5f;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Loại bỏ mũi tên mặc định của trình duyệt */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 140 140%27%3e%3cpolygon fill=%27%23666%27 points=%2760 40 100 80 60 120%27/%3e%3c/svg%3e');
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-select:hover {
+    border-color: #333;
+}
+
+.styled-select:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.styled-select option {
+    padding: 14px;
+    background-color: white;
+    color: #333;
+}
+#caption {
+    width: 100%;
+    height: 100%;
+    font-size: 1.01em;
+    border: none;
+    border-radius: 5px;
+    transition: width 0.3s;
+    overflow-wrap: break-word;
+    padding: 5px;
+    outline: none;
+}
+.input-caption input:focus {
+    outline: none;
+  }
+.choose_file {
+    border: 1px solid rgb(209, 209, 209);
+    height: 45vh;
+    width: 100%;
+    margin: 20px 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.choose_file input[type="file"] {
+    display: none;
+}
+.icon_img_video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    width: 20%;
+    height: 30%;
+    color: rgb(204, 203, 203);
+}
+#choose-file {
+    margin-top: 80px;
+    border: none;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(77, 107, 255);
+    color: white;
+    cursor: pointer;
+}
+#choose-file:hover {
+    background: rgb(114, 135, 241);
+}
+#post {
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: rgb(77, 107, 255);
+    font-weight: 900;
+    font-size: 1.2em;
+    color: white;
+}

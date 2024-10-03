@@ -1,0 +1,168 @@
+{% extends "page/layout.html" %}
+{% block title %} Messenger {% endblock %}
+{% block link %}
+<link rel="stylesheet" href=" {{url_for("static", filename="css/Messenger.css")}}">
+{% endblock %}
+{% block section %}
+<div class="list-can-chat">
+    <div class="search">
+        <div id="search">
+            <input type="text" name="search" placeholder="Tìm kiểm">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+        <div class="create-chat">
+            <button><i class="bi bi-envelope-plus"></i></button>
+        </div>
+    </div>
+    <div class="list-friend">
+        <ul>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button>
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <div class="mini-information">
+                        <p id="user-name">user name</p>
+                        <p id="first-messenger">tin nhắn đầu tiên hiện ở đây</p>
+                    </div>
+                </button>
+            </li>   
+        </ul>
+    </div>
+</div>
+<div id="messenger">
+    <div class="have-messenger">
+        <div class="information-address">
+            <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+            <p id="user-name">user name</p>
+            <div class="block-function">
+                <button><i class="bi bi-telephone-fill"></i></button>
+                <button><i class="bi bi-camera-video-fill"></i></button>
+                <button><i class="bi bi-three-dots"></i></button>
+            </div>
+        </div>
+        <div class="chat">
+            <ul>
+                <li id="sender">
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <p id="sender_name">user name</p>
+                    <p id="content-chat">content messenger</p>
+                </li>
+                <li id="addressee">
+                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="" id="avatar">
+                    <p id="sender_name">user name</p>
+                    <p id="content-chat">content messenger</p>
+                </li>
+            </ul>
+        </div>
+        <div class="send-messenger">
+            <form action="">
+                <input type="text" placeholder="Chat" id="send-messenger">
+                <div class="send-file">
+                    <button><i class="bi bi-emoji-grin"></i></button>
+                    <button><i class="bi bi-mic-fill"></i></button>
+                    <button><i class="bi bi-image-fill"></i></button>
+                </div>
+                <button id="send"><i class="bi bi-send"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

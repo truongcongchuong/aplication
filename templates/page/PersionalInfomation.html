@@ -1,0 +1,36 @@
+{% extends "page/layout.html" %}
+{% block title %}{{user.UserName}} {% endblock %}
+{% block link %}
+<link rel="stylesheet" href=" {{url_for("static", filename="css/PersionalInformation.css") }}">
+{% endblock %}
+{% block section %}
+<div class="PersionalInformation">
+    <div class="avatar">
+        <img id="user-post" src="{{ url_for("static", filename="IMG/AVATAR/USER/" + user.Avatar)}}" alt="">
+    </div>
+    <div id="PersionalInformation">
+        <ul class="user-name">
+            <li>{{ user.UserName }}</li>
+            <li><button><i class="bi bi-pencil-fill"></i>Change Persional Information</button></li>
+        </ul>
+        <ul class="number-of-article">
+            <li><span>1</span> bài đăng</li>
+            <li><span>1</span> người theo dõi</li>
+            <li><span>2</span> bạn bè</li>
+        </ul>
+    </div>
+</div>
+<div class="post-information">
+    <nav class="menu">
+        <li><i class="bi bi-grid-3x3"></i> Bài Viết</li>
+        <li><i class="bi bi-bookmark"></i> Đã Lưu</li>
+        <li><i class="bi bi-boxes"></i> Đã Gắn Thẻ</li>
+    </nav>
+    <div class="list-information">
+        <div class="no-content">
+            <i class="bi bi-boxes"></i>
+            <p>Chưa có bài viết nào</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    width: 100%;
+    flex-direction: column;
+}
+.block-real {
+    display: flex;
+    width: 40%;
+    height: 90vh;
+    margin: 20px 0px;
+}
+.block-real video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.interact {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.interact button {
+    font-size: 1.4em;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    margin: 10px auto;
+    background: transparent;
+}
+.interact button:hover {
+    background: whitesmoke;
+}

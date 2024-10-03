@@ -1,0 +1,338 @@
+.messenger {
+    height: 100vh;
+    width: 100%;
+}
+header {
+    width: 5%;
+}
+.user a img {
+    width: 50px;
+    height: 50px;
+}
+.function ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header span {
+    display: none;
+}
+section {
+    margin-left: 5%;
+    height: 99.8vh;
+    width: 350vh;
+}
+section .content{
+    display: flex;
+    margin:0px;
+}
+.list-can-chat img {
+    height: 50px;
+    width: 50px;
+}
+.list-can-chat {
+    height: 99.7vh;
+    width: 23pc;
+    padding: 0px 20px;
+    border: 1px solid rgb(223, 223, 223);
+}
+.search {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+}
+#search {
+    grid-row:1/2 ;
+    grid-column: 1/2;
+    position: relative;
+}
+.create-chat {
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+#search input {
+    width: 85%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0px 0px 0px 43px;
+    font-family: arial;
+    font-size: 17px;
+    font-weight: 700;
+    border: 1px solid rgb(214, 214, 214);
+}
+#search button {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate(-55%, -57%);
+    font-size: 1.5em;
+    border-radius: 90%;
+    background: rgb(240, 240, 240);
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: transparent;
+}
+.create-chat {
+    position: relative;
+}
+.create-chat button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background: transparent;
+    border: none;
+    color: rgb(170, 170, 170);
+}
+.create-chat button:hover {
+    color: rgb(119, 119, 119);
+}
+.list-friend {
+    height: 90%;
+    margin-top: 10px;
+}
+.list-friend ul {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.list-can-chat ul li,  .list-can-chat ul li button{
+    min-height: 50px;
+    width: 100%;
+}
+.list-can-chat ul li {
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.list-can-chat ul li button {
+    padding: 10px;
+    display: flex;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+.list-can-chat ul li:hover {
+    background: rgb(244, 241, 241);
+}
+.list-can-chat ul li img {
+    border-radius: 90%;
+}
+.mini-information {
+    margin: 0px 20px;
+}
+.mini-information p {
+    font-family: arial;
+}
+#user-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+#first-messenger {
+    font-size: 15px;
+    margin-top: 10px;
+}
+/* pha khoi messenger */
+.content {
+    margin-right: -20vh;
+    width: 99.9%;
+    height: 100%;
+}
+#messenger {
+    height: 100%;
+    width: 73%;
+    position: relative;
+}
+/* pha css cho phan khong co tin nhan*/
+.no-messenger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.no-messenger i {
+    border: 1px solid rgb(164, 164, 164);
+    border-radius: 50%;
+    font-size: 3em;
+    padding: 19px;
+}
+.no-messenger p {
+    font-family: arial;
+    margin-top: 15px;
+}
+/* css phần có tin nhắn*/
+.have-messenger img {
+    height: 50px;
+    width: 50px;
+}
+.have-messenger {
+    height: 100%;
+    width: 100%;
+}
+.information-address {
+    display: flex;
+    position: relative;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(224, 221, 221);
+}
+.information-address img {
+    border-radius: 50%;
+    margin-left: 30px;
+}
+.information-address p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+.block-function {
+    position: absolute;
+    right: 1px;
+    height: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-function button {
+    font-size: 1.5em;
+    margin: 0px 5px;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;   
+}
+.block-function button:hover {
+    background: rgb(238, 238, 238);
+}
+.chat {
+    height: 80%;
+    width: 100%;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+/* phần hiển thị nội dung tin nhắn */
+.chat ul {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x:  hidden;
+    padding: 0px 10px;
+}
+.chat li {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 10% 80%;
+    grid-template-rows: 40% 80%;
+    margin: 10px 0px;
+    min-height: 50px;
+    position: relative;
+}
+.chat li img {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    grid-row: 2/3;
+    position: absolute;
+    bottom: 0px;
+}
+#sender p{
+    font-family: arial;  
+}
+#sender_name {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-size: 15px;
+    font-weight: bold;
+}
+#content-chat {
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 9px 0px 0px 0px;
+    background: rgb(230, 230, 230);
+    border-radius: 15px 15px 15px 0px;
+    padding: 0px 15px;
+    align-items: center;
+    min-width: 20px;
+}
+/* phần kết thúc phần nội dung tin nhắn*/
+/* phần hiển thị nội dung tin nhắn của người nhận tin nhắn*/
+#addressee {
+    float: right;
+    clear: both;
+    display: grid;
+    grid-template-columns: 80% 10%;
+}
+#addressee p {
+    display: flex;
+    justify-content: right;
+}
+#addressee #sender_name {
+    grid-column: 1/2;
+}
+#addressee #content-chat {
+    grid-column: 1/2;
+    border-radius: 15px 15px 0px 15px;
+}
+.chat #addressee img {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: absolute;
+    right: 0px;
+}
+/* két thúc phần người nhận người được tin nhắn */
+.send-messenger {
+    border-top: 1px solid rgb(245, 245, 245);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send-messenger form {
+    width: 90%;
+    height: 60%;
+    position: relative;
+}
+.send-messenger form input {
+    width: 85%;
+    height: 100%;
+    padding: 0px 25px 0px 130px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.send-file {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translate(10%, -50%);
+}
+.send-file button {
+    font-size: 20px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: transparent;
+}
+.send-file button:hover {
+    background: rgb(244, 243, 243);
+}
+#send {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -40%);
+    font-size: 25px;
+    border: none;
+    background: transparent;
+}

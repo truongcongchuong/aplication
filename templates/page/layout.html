@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <script src="{{url_for('static', filename='js/nontification.js')}}"></script>
+        <link rel="stylesheet" href=" {{url_for("static", filename="css/layout.css") }}">
+        <link rel="stylesheet" href=" {{url_for("static", filename="css/mini_page.css") }}">
+        <script src="{{url_for("static", filename="js/mobal.js") }}"></script>
+        <link rel="stylesheet" href=" {{url_for("static", filename="boostrap/node_modules/bootstrap-icons/font/bootstrap-icons.css") }}">
+        {% block  link %}
+        {% endblock  %}
+    </head>
+    <body>
+        <header>
+            <div class="user">
+                <a href="{{url_for("Persional_information")}}">
+                    <img src="
+                    {% block pathAvatar %}
+                    {% endblock %}
+                    " alt="">
+                </a>
+                <!--{{url_for("static", filename= avatar + "defaulf.png")}}-->
+            </div>
+            <nav class="function">
+               <ul>
+                    <li><a href="{{ url_for("Home")}}"><i class="bi bi-house-door-fill"></i><span>Home</span></a></li>
+                    <li><a href=""><i class="bi bi-search"></i><span>Search</span></a></li>
+                    <li><a href="{{ url_for("Reals")}}"><i class="bi bi-collection-play"></i><span>Reals</span></a></li>
+                    <li><a href="{{ url_for("messenger")}}"><i class="bi bi-messenger"></i><span>Messenger</span></a></li>
+                    <li><a href=""><i class="bi bi-bell"></i><span>Notification</span></a></li>
+                    <li><a href="#" id="displayMobal"><i class="bi bi-plus-square-fill"></i><span>Post</span></a></li>
+                </ul>
+            </nav>
+            <div class="Logout">
+                <a href="{{url_for("LogOut")}}"><i class="bi bi-box-arrow-right"></i></a>
+            </div>
+        </header>
+        <div class="mobal">
+        </div>
+        <section>
+            <div class="content">
+            {% block  section %}
+            {% endblock  %}
+            </div>
+        </section>
+    </body>
+</html>

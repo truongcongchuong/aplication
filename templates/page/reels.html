@@ -1,0 +1,55 @@
+{% extends "page/layout.html" %}
+{% block title %} Reals {% endblock %}
+{% block link %}
+<link rel="stylesheet" href=" {{url_for("static", filename="css/reals.css") }}">
+{% endblock %}
+{% block section %}
+<div class="block-real">
+    <div class="real">
+        <video id="real" width="100%" height="100%" controls>
+            <source src="{{url_for('static', filename='VIDEO/POST/beach.mp4')}}" type="video/mp4">
+        </video>          
+    </div>
+    <div class="interact">
+        <button><i class="bi bi-suit-heart"></i></button>
+        <button><i class="bi bi-chat"></i></button>
+        <button><i class="bi bi-bookmark-fill"></i></button>
+    </div>
+</div>
+<div class="block-real">
+    <div class="real">
+        <video id="real" width="100%" height="100%" controls>
+            <source src="{{url_for('static', filename='VIDEO/POST/beach.mp4')}}" type="video/mp4">
+        </video>          
+    </div>
+    <div class="interact">
+        <button><i class="bi bi-suit-heart"></i></button>
+        <button><i class="bi bi-chat"></i></button>
+        <button><i class="bi bi-bookmark-fill"></i></button>
+    </div>
+</div>
+<div class="block-real">
+    <div class="real">
+        <video id="real" width="100%" height="100%" controls>
+            <source src="{{url_for('static', filename='VIDEO/POST/beach.mp4')}}" type="video/mp4">
+        </video>          
+    </div>
+    <div class="interact">
+        <button><i class="bi bi-suit-heart"></i></button>
+        <button><i class="bi bi-chat"></i></button>
+        <button><i class="bi bi-bookmark-fill"></i></button>
+    </div>
+</div>
+<div class="block-real">
+    <div class="real">
+        <video id="real" width="100%" height="100%" controls>
+            <source src="{{url_for('static', filename='VIDEO/POST/beach.mp4')}}" type="video/mp4">
+        </video>          
+    </div>
+    <div class="interact">
+        <button><i class="bi bi-suit-heart"></i></button>
+        <button><i class="bi bi-chat"></i></button>
+        <button><i class="bi bi-bookmark-fill"></i></button>
+    </div>
+</div>
+{% endblock %} 

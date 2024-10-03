@@ -53,6 +53,16 @@
                 <input type="password" name="confirmPassword" id="confirmPassword" value="{{ confirmPassword or ""}}" required />
                 <label for="confirmPassword">Confirm Password</label>
               </div>
+              <div class="input" id="gender_birthday">
+                <input type="date" id="date" name="Birthday"/>
+                <label for="date">Birthday</label>
+                <p>gender<p>
+                <select name="gender" id="gender">
+                  {%for i in gender%}
+                  <option value="{{i.id}}">{{i.GenderName}}</option>
+                  {%endfor%}
+                </select>
+              </div>
               <div class="input" id="submit">
                 <button type="submit">Register</button>
               </div>

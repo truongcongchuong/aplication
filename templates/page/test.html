@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <script src="{{url_for('static', filename='js/nontification.js')}}"></script>
+        <link rel="stylesheet" href=" {{url_for("static", filename="css/layout.css") }}">
+        <link rel="stylesheet" href=" {{url_for("static", filename="boostrap/node_modules/bootstrap-icons/font/bootstrap-icons.css") }}">
+        {% block  link %}
+        
+        {% endblock  %}
+    </head>
+    <body>
+        <header>
+            <div class="user">
+                <a href="{{url_for("Persional_information")}}"><img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt=""></a>
+            </div>
+            <nav class="function">
+               <ul>
+                    <li><a href="{{ url_for("Home")}}"><i class="bi bi-house-door-fill"></i><span>Home</span></a></li>
+                    <li><a href=""><i class="bi bi-search"></i><span>Search</span></a></li>
+                    <li><a href=""><i class="bi bi-globe2"></i><span>Discover</span></a></li>
+                    <li><a href=""><i class="bi bi-messenger"></i><span>Messenger</span></a></li>
+                    <li><a href=""><i class="bi bi-bell"></i><span>Notification</span></a></li>
+                    <li><a href=""><i class="bi bi-plus-square-fill"></i><span>Post</span></a></li>
+                </ul>
+            </nav>
+            <div class="Logout">
+                <a href="{{url_for("LogOut")}}"><i class="bi bi-box-arrow-right"></i></a>
+            </div>
+        </header>
+        <section>
+            {% block  section %}
+            <div class="content">
+                <ul class="story">
+                    <li>
+                        <button>
+                            <img id="user-post" src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="">
+                            <video id="story"  width="100%" height="100%"  disabled>
+                                <source src="{{url_for("static", filename="VIDEO/POST/beach.mp4")}}" type="video/mp4">
+                            </video>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img id="user-post" src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="">
+                            <video id="story"  width="100%" height="100%"  disabled>
+                                <source src="{{url_for("static", filename="VIDEO/POST/beach.mp4")}}" type="video/mp4">
+                            </video>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img id="user-post" src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="">
+                            <video id="story"  width="100%" height="100%"  disabled>
+                                <source src="{{url_for("static", filename="VIDEO/POST/beach.mp4")}}" type="video/mp4">
+                            </video>
+                        </button>
+                    </li>
+                </ul>
+                <ul id="content">
+                    <li>
+                        <div class="post">
+                            <div id="information-user-post">
+                                <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="">
+                                <span>user name</span>
+                                <button><i class="bi bi-three-dots"></i></button>
+                            </div>
+                            <div class="caption">
+                                <p>caption for post</p>
+                            </div>
+                            <div class="media-post">
+                                <button>
+                                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="">
+                                </button>   
+                            </div>
+                        </div>
+                        <div class="interact">
+                            <button><i class="bi bi-suit-heart"></i><span>Like</span></button>
+                            <button><i class="bi bi-chat"></i><span>Comment</span></button>
+                            <button><i class="bi bi-bookmarks-fill"></i><span>Save</span></button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post">
+                            <div id="information-user-post">
+                                <img src="{{ url_for("static", filename="IMG/AVATAR/USER/defaulf.png")}}" alt="">
+                                <span>user name</span>
+                                <button><i class="bi bi-three-dots"></i></button>
+                            </div>
+                            <div class="caption">
+                                <p>caption for post</p>
+                            </div>
+                            <div class="media-post">
+                                <button>
+                                    <img src="{{ url_for("static", filename="IMG/AVATAR/USER/Planet9_Wallpaper_5000x2813.jpg")}}" alt="">
+                                </button>   
+                            </div>
+                        </div>
+                        <div class="interact">
+                            <button><i class="bi bi-suit-heart"></i><span>Like</span></button>
+                            <button><i class="bi bi-chat"></i><span>Comment</span></button>
+                            <button><i class="bi bi-bookmarks-fill"></i><span>Save</span></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        {% endblock  %}
+        </section>
+    </body>
+</html>

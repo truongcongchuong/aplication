@@ -1,0 +1,134 @@
+.HomePage {
+    width: 60%;
+}
+.story {
+    margin: 20px 0px 0px 0px;
+    height: 240px;
+    width: 100%;
+    list-style: none;
+    display: flex;  
+    overflow-x: auto; 
+    overflow-y: hidden;
+    white-space: nowrap; 
+}
+.story img {
+    height: 40px;
+    width: 40px;
+}
+.story li {
+    height: 100%;
+    width: 150px;
+    border-radius: 10px;
+    position: relative;
+    margin: 0px 10px 0px 0px;
+    flex-shrink: 0;
+}
+.story button{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+}
+#story {
+    border-radius: 10px;
+    width: 100%;       
+    height: 100%;    
+    object-fit: cover; 
+}
+#user-post {
+    position: absolute;
+    z-index: 1;
+    border-radius: 90%;
+    top: 20px;
+    left: 5px;
+    border: 5px solid red;
+}
+/* hiển thị phần các bài đăng*/
+#content {
+    margin-top: 20px;
+    list-style: none;
+}
+.post {
+    display: block;
+    min-height: 50px;
+}
+#content li {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0px;
+    min-height: 50px;
+    box-shadow: 1px 1px 10px 0px rgb(235, 235, 235);
+    border: 0.5px solid rgb(237, 237, 237);
+}
+#information-user-post {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+#information-user-post img {
+    height: 50px;
+    width: 50px;
+    border-radius: 90%;
+}
+#information-user-post span {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#information-user-post button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.caption {
+    margin: 10px 0px;
+    min-height: 20px;
+}
+.caption p {
+    font-family: arial;
+}
+.media-post {
+    min-height: 400px;
+}
+.media-post button {
+    background: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+.media-post button img {
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    max-height: 400px;
+}
+.interact {
+    display: flex;
+    margin-top: 30px;
+}
+.interact button {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+.interact button:hover {
+    background: rgb(244, 244, 244);
+}
+.interact button i {
+    margin: 0px 10px;
+    font-weight: 900;
+}
+.interact button span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

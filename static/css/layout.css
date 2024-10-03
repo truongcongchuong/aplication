@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    display: flex;
+}
+header {
+    border-right: 1px solid rgb(218, 215, 215);
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+}
+.user {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user a {
+    border-radius: 90%;
+}
+.user a img {
+    height: 80px;
+    width: 80px;
+    border-radius: 90%;
+}
+.function {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+}
+.function ul {
+    list-style: none;
+    width: 90%;
+}
+.function ul li {
+    width: 100%;
+    margin: 10px 0px;   
+    border-radius: 10px;
+}
+.function ul li a {
+    color: rgb(82, 82, 82);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.function ul li a:hover {
+    background: rgb(238, 237, 237);
+    color: black;
+    font-weight: bold;
+}
+.function ul li a i {
+    margin: 0px 20px 0px 10px;
+    font-size: 1.8em;
+}
+.function ul li a span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+.Logout {
+    border-top: 1px solid rgb(152, 151, 151);
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Logout a {
+    color: black;
+    font-size: 2em;
+}
+section {
+    width: 85%;
+    display: block;
+    margin-left:15%;
+}
+.content {
+    width: 88%;
+    margin-left: 20vh;
+    height: 100%;
+}

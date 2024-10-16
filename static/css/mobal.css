@@ -8,14 +8,15 @@
     align-items: center;
     background-color: rgba(60, 57, 57, 0.5);
     display: none;
+    overflow-y: hidden;
 }
 .content-mobal {
-    margin: auto;
-    width: 37%;
-    height: 90%;
+    width: 50%;
+    height: 98%;
     background: white;
     border-radius: 10px;
     position: relative;
+    margin: 10px auto;
 }
 .header_mini_page {
     border-bottom: 1px solid rgb(205, 204, 204);
@@ -49,7 +50,13 @@
 }
 .content_mini_page {
     width: 90%;
+    height: 100%;
     margin: 10px auto;
+    position: relative;
+}
+#Create-post {
+    height: 89%;
+    position: relative;
 }
 .input-caption {
     width: 100%;
@@ -57,13 +64,13 @@
     display: flex;
 }
 .select-wrapper {
-    position: relative;
     width: 40%;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .styled-select {
-    width: 100%;
+    width: 90%;
     padding: 14px;
     font-size: 16px;
     border: 2px solid #5f5f5f;
@@ -104,25 +111,30 @@
     overflow-wrap: break-word;
     padding: 5px;
     outline: none;
+    display: block;
 }
 .input-caption input:focus {
     outline: none;
   }
-.choose_file {
+.choose_file, .block-choose-file {
     border: 1px solid rgb(209, 209, 209);
-    height: 45vh;
+    height: 400px;
     width: 100%;
-    margin: 20px 0px;
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding: 0px;
+    margin-top:20px;
 }
-.choose_file input[type="file"] {
+.block-choose-file {
+    margin: 0px;
+}
+.block-choose-file input[type="file"] {
     display: none;
 }
-.icon_img_video {
+.block-choose-file .icon_img_video {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +143,7 @@
     height: 30%;
     color: rgb(204, 203, 203);
 }
-#choose-file {
+.block-choose-file #choose-file {
     margin-top: 80px;
     border: none;
     width: 40%;
@@ -156,4 +168,38 @@
     font-weight: 900;
     font-size: 1.2em;
     color: white;
+}
+
+/* css cho phần preview ảnh */
+.preview {
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.function-edit {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.function-edit button {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(255, 255, 255);
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.function-edit button i {
+    margin: 0px 10px 0px 0px;
+}
+.function-edit button:hover {
+    background: rgb(222, 221, 221);
 }

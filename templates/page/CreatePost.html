@@ -6,27 +6,35 @@
         </p>
     </div>
     <div class="content_mini_page">
-        <form action="">
+        <form action="" enctype="multipart/form-data" method="POST" id="Create-post">
             <div class="input-caption">
-                <textarea placeholder="caption" rows="4" id="caption"></textarea>
+                <textarea placeholder="caption" rows="4" id="caption" name="caption"></textarea>
             </div>
             <div class="choose_file">
-                <input type="file" name="filePost">
-                <div class="icon_img_video">
-                    <i class="bi bi-bookmark-plus-fill"></i>
+                <div class="block-choose-file">
+                    <input type="file" name="file[]" multiple id="file-input">
+                    <div class="icon_img_video">
+                        <i class="bi bi-bookmark-plus-fill"></i>
+                    </div>
+                    <button type="button" id="choose-file">Choose file</button>
                 </div>
-                <button type="button" id="choose-file">Choose file</button>
+                <div class="preview">
+                    <div class="function-edit">
+                        <button type="button"><i class="bi bi-pencil-fill"></i> edit</button>
+                        <button type="button" id="choose-file"><i class="bi bi-bookmark-plus-fill"></i> add video/image </button>
+                    </div>
+                    <div class="preview-0-file">
+                    </div>
+                </div>
             </div>
             <div class="select-wrapper">
-                <select class="styled-select" name="">
-                    <option value="0">Choose an option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
+                <select class="styled-select" name="typePost">
+                    {% for type in typePost %}
+                    <option value="{{type.id}}">{{ type.TypeName }}</option>
+                    {% endfor %}
                 </select>
             </div>
-            <button type="submit" id="post">Post</button>
+            <button type="button" id="post">Post</button>
         </form>
     </div>
 </div>

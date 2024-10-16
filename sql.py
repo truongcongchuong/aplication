@@ -76,6 +76,12 @@ class Post(db.Model):
     caption = db.Column(db.Text)
     TypePost = db.Column(db.Integer, db.ForeignKey("TypePost.id"), nullable = True)
     posting_date = db.Column(db.DateTime,  default= datetime.now)
+
+class FilePost(db.Model):
+    __tablename__ = "FilePost"
+    id = db.Column(db.Integer, primary_key = True)
+    fileName = db.Column(db.Text, unique = True)
+    post = db.Column(db.Integer, db.ForeignKey("Post.id"))
 # comment
 class Comment(db.Model):
     __tablename__ = "Comment"

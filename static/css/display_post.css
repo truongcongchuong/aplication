@@ -1,0 +1,134 @@
+/* kích thước chung của các file hiển thị*/
+#file_1,
+#file_2,
+#file_3,
+#file_4,
+#file_5,
+#out-of-range {
+    height: 100%;
+    width: 100%;
+}
+/**/
+.preview-1-file img,
+.preview-2-file img,
+.preview-3-file img,
+.preview-4-file img,
+.preview-5-file img,
+.display-out-file img,
+.preview-1-file video,
+.preview-2-file video,
+.preview-3-file video,
+.preview-4-file video,
+.preview-5-file video,
+.display-out-file video {
+    object-fit: cover;
+    border: none;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+/* cách hiển thị 1 file */
+.preview-1-file {
+    height: 400px;
+}
+/* cách hiển thị 2 file */
+.preview-2-file {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.preview-20file #file_1 {
+    grid-column: 1/2;
+    height: 400px;
+    width: 100%;
+    margin: 0px;
+}
+.preview-2-file #file_2 {
+    grid-column: 2/3;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+/* cách hiển thị 3 file */
+.preview-3-file,
+.preview-4-file {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 200px);
+}
+.preview-3-file #file_1{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.preview-3-file #file_2{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.preview-3-file #file_3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+/* cách hiển thị 4 file */
+.preview-4-file #file_1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.preview-4-file #file_2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.preview-4-file #file_3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.preview-4-file #file_4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+/* cach hiển thị 5 file */
+.preview-5-file,
+.display-out-file {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 200px);
+}
+.preview-5-file #file_1,
+.display-out-file #file_1 {
+    grid-row: 1/2;
+    grid-column: 1/4;
+}
+.preview-5-file #file_2,
+.display-out-file #file_2 {
+    grid-row: 1/2;
+    grid-column: 4/7;
+}
+.preview-5-file #file_3,
+.display-out-file #file_3 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+.preview-5-file #file_4,
+.display-out-file #file_4 {
+    grid-row: 2/3;
+    grid-column: 3/5;
+}
+.preview-5-file #file_5,
+.display-out-file #file_5 {
+    grid-row: 2/3;
+    grid-column: 5/7;
+}
+/* lượng file upload lơn hơn 5 file */
+.display-out-file #out-of-range {
+    grid-row: 2/3;
+    grid-column: 5/7;
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(141, 138, 138, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+}

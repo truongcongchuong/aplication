@@ -11,6 +11,38 @@
     overflow-y: hidden;
     white-space: nowrap; 
 }
+.story #button-user {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30%;
+    border-radius: 0px 0px 10px 10px;
+    background: white;
+    display: flex;
+    justify-content: center;   
+}
+.story #button-user::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+}
+#button-user div {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    font-size: 30px;
+    background: linear-gradient(45deg, #7f00ff, #e100ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 50%;
+}
 .story img {
     height: 40px;
     width: 40px;
@@ -22,6 +54,7 @@
     position: relative;
     margin: 0px 10px 0px 0px;
     flex-shrink: 0;
+    box-shadow: 2px 2px 2px 2px rgb(237, 237, 237);
 }
 .story button{
     height: 100%;
@@ -44,13 +77,27 @@
     left: 5px;
     border: 5px solid red;
 }
+#username_post {
+    position: absolute;
+    z-index: 4;
+    font-size: 1.1em;
+    color: white;
+    width: 90%;
+    bottom: 3px;
+    text-shadow: 6px 2px 7px rgba(0, 0, 0, 0.7);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: left;
+    padding: 0px 9%;
+}
 /* hiển thị phần các bài đăng*/
 #content {
     margin-top: 20px;
     list-style: none;
 }
 .post {
-    display: block;
     min-height: 50px;
 }
 #content li {
@@ -94,20 +141,11 @@
     font-family: arial;
 }
 .media-post {
-    min-height: 400px;
+    min-height: 50px;
 }
 .media-post button {
     background: transparent;
     border: none;
-    height: 100%;
-    width: 100%;
-    display: grid;
-}
-.media-post button img {
-    display: block;
-    width: 100%;
-    min-height: 400px;
-    max-height: 400px;
 }
 .interact {
     display: flex;
@@ -131,4 +169,24 @@
 }
 .interact button span {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.none-post {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+    border: none !important;
+}
+.none-post h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    color: rgb(154, 152, 152)
+}
+#icon-text {
+    font-size: 6em;
+    background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
